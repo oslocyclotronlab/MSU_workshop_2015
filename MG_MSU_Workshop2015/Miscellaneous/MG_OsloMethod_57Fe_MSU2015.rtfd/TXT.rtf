@@ -1,0 +1,1514 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red217\green11\blue0;\red255\green0\blue0;\red47\green180\blue29;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14060\viewh14740\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf2 TEN STEPS TO HEAVEN\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28 \cf0 \ul \ulc0 1. From root to mama matrix
+\b0\fs24 \ulnone \
+
+\b\fs28 \ul 2. Inspecting the alfna raw-matrix
+\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs28 \cf0 \CocoaLigature0 3. Unfold the alfna matrix\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature1 4. First generation gammas
+\b0 \ulnone \
+
+\b \ul 5. Rhosigchi\
+7. D2rho
+\b0\fs24 \
+
+\b\fs28 8. Counting
+\b0\fs24 \ulnone \
+
+\b\fs28 \ul 9. Running root to display output from counting\
+10.  Normalization\
+\
+An overview \cf2 (\cf3 \ulnone \CocoaLigature0 MG1_OsloMeth_MSU2015.pptx)
+\b0\fs24 \cf0 \ul \ulc0 \CocoaLigature1 \
+\ulnone \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs36 \cf0 **************************************************\
+
+\fs28 57Fe(p,p\'92)\
+Cec\'92s experiment March 2 - 12, 2012\
+Oslo method software version: Oct 23, 2015 
+\fs36 \
+**************************************************
+\b0\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs28 \cf0 The mama matrix is called alfna57Fe.m	(14.8 million counts)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b \cf0 \ul 1. From root matrix to mama matrix\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0\fs22 \cf0 \CocoaLigature0 BE SURE THAT th22mama.C IS IN YOUR DIRECTORY!\
+\
+magneg@1x-193-157-207-146.uio.no:test>root -l offline_57Fe_widetimegate.root \
+root [0] \
+Attaching file offline_57Fe_widetimegate.root as _file0...\
+root [1] .ls\
+TFile**		offline_57Fe_widetimegate.root	\
+ TFile*		offline_57Fe_widetimegate.root	\
+  KEY: TH1I	h_de_n;1	#DeltaE multiplicity\
+\'85.\
+  KEY: TH2F	m_alflabr_bg;1	E(LaBr) : E_\{x\} background\
+  KEY: TH2F	m_alfna;1	E(NaI) : E_\{x\}\
+  KEY: TH2F	m_alfna_bg;1	E(NaI) : E_\{x\} background\
+\'85.\
+  KEY: TH2F	m_siri_e_t_b7;1	t(NaI) : E(Si) detector 7\
+root [2] .x th22mama.C+ 
+\f2\b \cf4 (
+\f1\b0 \cf0 m_alfna,"alfna57Fe.m"
+\f2\b \cf4 )
+\f1\b0 \cf0 \
+Info in <TMacOSXSystem::ACLiC>: creating shared library /Users/magneg/Desktop/test/./th22mama_C.so\
+matrix is 1600x500; comment='none'\
+root [3] .q\
+magneg@1x-193-157-207-146.uio.no:test>
+\f0\b\fs24 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs28 \cf0 \ul 2. Inspecting the alfna raw-matrix \CocoaLigature0 (\cf3 \ulnone MG_TriangelCuts_MSU2015.pptx\cf0 \ul )
+\fs24 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0\fs22 \cf0 \CocoaLigature0 magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>mama\
+ \
+ ____________________________________________________\
+|                                                    |\
+|              Welcome to M A M A  7.4.1             |\
+|                                                    |\
+|   MAtrix MAnipulation, Oslo Cyclotron Laboratory   |\
+|           Magne Guttormsen, November 2002          |\
+|                                                    |\
+|   MAMA handles 2 matrices of dimension 4096x2048   |\
+|       and 2 singles spectra of length 8192         |\
+|                                                    |\
+| Imortant commands:                                 |\
+|  HE - help            ST - stop MAMA               |\
+|  RE - read file       WR - write file              |\
+|  DS - display spec.   CR - curser, activate spec.  |\
+|  HE NW - news                                      |\
+|____________________________________________________|\
+mama>re\
+Destination spectrum <1>:\
+Filename          <TEST>:alfna57Fe.m\
+ FILE=Disk\
+ KIND=Matrix\
+ LABORATORY=Oslo Cyclotron Laboratory (OCL)\
+ EXPERIMENT=siri2root\
+ COMMENT=57Fe(p,p')\
+ TIME=2013-10-30 13:57:42\
+ CALIBRATION EkeV=6, 0.000000E+00, 1.000000E+01, 0.000000E+00, 0.000000E+00, 4.000000E+01, 0.000000E+00\
+ PRECISION=16\
+ DIMENSION=2,0:1599,0: 499\
+ CHANNEL=(0:1599,0: 499)\
+..........  \
+mama>ds 2\
+..  \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic Screen Shot 2015-11-11 at 13.54.36.png \width11520 \height6520
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf0 Remove left-over of elastic peak
+\f1\b0 \
+mama>ex\
+ Click two times for proper markers in matrix\
+mama>cr                           \
+Type X or click on green button to exit\
+x=   81, energy =    810.000 keV  \
+y=    1, energy =     40.000 keV\
+Number of counts=  0.350000E+02\
+x=   81, energy =    810.000 keV  \
+y=    0, energy =      0.000 keV\
+Number of counts=  0.567000E+03\
+mama>pc                           \
+Destination spectrum <1>:\
+\
+Lower marker on x-axis <    0>:\
+Higher marker on x-axis< 4095>:\
+\
+Lower marker on y-axis <    0>:\
+Higher marker on y-axis< 2047>:3\
+\
+Type constant < 0.>:\
+mama>ds 2\
+..  \
+\
+
+\f2\b Remove negative counts by filling from neighbours (fn)
+\f1\b0 \
+mama>fn\
+Destination spectrum <2>:\
+Source spectrum      <1>:\
+\
+Dimension along x-axis <1600>:\
+Dimension along y-axis < 500>:\
+\
+Lowest and highest counts are (min,max) = (-0.13E+04 0.28E+05)\
+You may now delete the most negative numbers before filling\
+Do you want to delete these negative counts     <n>:y\
+Counts < Limit will be deleted, Limit = <-0.28E+04>:-50\
+\
+Write FWHMx (ch) around ch x=  160 <   9.2>:\
+Write FWHMx (ch) around ch x= 1440 <   3.7>:\
+\
+Write FWHMy (ch) around ch y=   50 <   1.0>:\
+Write FWHMy (ch) around ch y=  450 <   1.0>:\
+ FWHM have been expressed by A + B * SQRT(ch):\
+Ax= 11.9314  Bx= -0.2168     Ay=  1.0000 By= -0.0000\
+Probability-matrix around (x,y)=( 160,  50):\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0040.0060.0090.0110.0140.0160.0170.0180.0170.0160.0140.0110.0090.0060.004\
+ 0.0150.0210.0290.0380.0470.0550.0600.0610.0600.0550.0470.0380.0290.0210.015\
+ 0.0040.0060.0090.0110.0140.0160.0170.0180.0170.0160.0140.0110.0090.0060.004\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+\
+ Probability-matrix around (x,y)=(1440, 450):\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0030.0100.0220.0350.0410.0350.0220.0100.0030.0000.0000.000\
+ 0.0000.0000.0030.0120.0350.0760.1210.1410.1210.0760.0350.0120.0030.0000.000\
+ 0.0000.0000.0000.0030.0100.0220.0350.0410.0350.0220.0100.0030.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+ 0.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.0000.000\
+\
+Probability-matrix OK? (y/n) <y>:\
+..................................................\
+Before number of neg. ch. was:  19252, with total counts:   -184369\
+After  number of neg. ch. is:    5119, with total counts:    -30845\
+mama>ds\
+\
+
+\f2\b Brutally remove negative counts (rn)
+\f1\b0 \
+mama>rn\
+Destination spectrum <1>:\
+Source spectrum      <2>:\
+  \
+ With this command you may replace the counts in the\
+ spectrum/matrix with a given value. The options are:\
+ Replace counts if they are below a certain value, or,\
+ if the counts are in-between two values, or if the\
+ counts exceed a certain value. The defaults are:\
+ Choose (1), replace-value = 0 and Max = 0 which will\
+ delete all negative numbers.\
+ You may also change floating point values -> integers.\
+ ----------------------------------------------------- \
+       Counts < Max is replaced........... choose: (1)\
+ Min < Counts < Max is replaced........... choose: (2)\
+ Min < Counts       is replaced........... choose: (3)\
+ Replace floating counts by integers...... choose: (4)\
+ Return to MAMA........................... choose: (5)\
+ ----------------------------------------------------- \
+ Choose your option                               <1>:\
+\
+Give new value for the counts to be replaced <  0.00>:\
+Delete counts with value lower than          <  0.00>:\
+\
+Number of channels replaced:          5119\
+Number of counts before:        14880127.0\
+Number of counts after:         14910972.0\
+Increase of counts:                30845.0\
+mama>ds2\
+\
+
+\f2\b Make response matrix (rm)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 mama>rm                           \
+Dimension of response-matrix <1600>:\
+\
+Cal. coeff. a0 (keV)     <     0.0>:\
+Cal. coeff. a1 (keV/ch)  <    10.0>:\
+  \
+ List of response functions. The ones marked old, are not recommended\
+ (1) NaI_old,    CACTUS 5x5 inch before 2012\
+ (2) LaBr_2012,  Campaign 4x8 inch LaBr from Milano in CACTUS frame\
+ (3) NaI_2012,   CACTUS 5x5 inch after 2012\
+ (4) Seg2,       SuN at MSU 2014, with target inside  (2 cm?), GEANT4\
+ (5) Seg3,       SuN at MSU 2014, with target outside (2 cm?), GEANT4\
+ (6) Clover_old, Notre Dame 2015, GEANT4\
+ (7) Clover,     Notre Dame 2015, GEANT4\
+ (8) Seg23,      SuN at MSU 2015 with target in center, GEANT4\
+ (9) Gaussian\
+\
+Choose your response function <3>:\
+  \
+ If you are unfolding/folding a gamma-ray matrix or spectrum,\
+ you should create response functions with 10 times less FWHM\
+ than experimentally known. Then FWHM(response) = FWHM(real)/10,\
+ which is optimal for the unfolding (UN) and folding (FO) procedures.\
+ If you just want to view the response matrix with command GR,\
+ then use a factor = 1. Then FWHM(response) = FWHM(real).\
+\
+Respons functions for unfolding/folding (10.) or viewing (1.) <10.0>:\
+Real experimental relative FWHM value at Egam=1.33 MeV (%)<  6.8>:\
+\
+(In the calculation the response function is obtained\
+with a FWHM value of (1/10.0)*(the real experimental FWHM)\
+due to technical reasons in the unfolding procedure)\
+......................................................\
+ Parameters for response function written to resp.dat\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf0 Find the diagonal Ex=Eg\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 mama>cr\
+Type X or click on green button to exit\
+x=  104, energy =   1040.000 keV  \
+y=   14, energy =    560.000 keV\
+Number of counts=  0.000000E+00\
+x=  788, energy =   7880.000 keV  \
+y=  185, energy =   7400.000 keV\
+Number of counts=  0.000000E+00\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \ul 3. Unfold the alfna matrix (\cf3 \ulnone MG_Unfolding_MSU2015.pptx\cf0 \ul )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0\fs22 \cf0 mama>un\
+Destination spectrum <2>:\
+Source spectrum      <1>:\
+\
+New (0) or old (1) unfolding procedure <0>:\
+\
+Dimension along x-axis <1600>:\
+Dimension along y-axis < 500>:\
+ Give upper limits for the unfolding. The boarder is\
+ given by interpolation between (x1,y1) and (x2,y2)\
+  \
+     (x2,y2) second point\
+ xxxxxxx\
+ xxxxxxxxx\
+ xxxxxxxxxxx\
+ xx matrix xxx\
+ xxxxxxxxxxxxxxx\
+              (x1,y1) first point\
+  \
+\
+First point x1  < 1599>:104\
+First point y1  <    0>:14\
+Second point x2 < 1599>:788\
+Second point y2 <  499>:185\
+  Give limits for the chisquare-test:\
+  Opt. 1: Recommended for LaBr- and NaI-spectra. For full-\
+          energy gammas above 2 MeV, we set lower limit at 500 keV.\
+           Below, the limit is 1/4 of the full-energy. Remember,\
+          full-energy is taken from the upper unfolding limit\
+  Opt. 2: A fixed lower limit for the chi-test is applied\
+  Opt. 3: Return and set proper upper limits for unfolding\
+\
+\
+Option (1/2/3)                  <1>:\
+\
+Include total detector efficiency (y/n) <y>:\
+  \
+ The efficiency at low energy (< 1000 keV) have to be given.\
+ It depends on various experimental conditions as thresholds\
+ on ADCs, gamma-absorber (2 mm Cu), timing etc. The program\
+ always assumes Eff = 0.0 at Egam < 30 keV and Eff = 1.00 at\
+ Egam > 1000 keV. However, in between these energies you can\
+ define a new shape of the discrimination.\
+  \
+   |                                                ************\
+   |                                  **************            \
+0.8|                                **                          \
+   |                              **                            \
+0.6|                           ***                              \
+   |                        ***                                 \
+0.4|                      **                                    \
+   |                     *                                      \
+0.2|                   **                                       \
+   |                 **                                         \
+0.0|---------.---------.---------.---------.---------.---------.\
+   0        100       200       300       400       500   E(keV)\
+\
+Do you want to change the discriminator threshold <n>:n\
+\
+Number of iterations ( <200 )  <33>:\
+  \
+ The iteration is terminated when the folding of\
+ the unfolded spectrum equals the raw spectrum. It\
+ is however recommended to stop before the Chi2 is\
+ at minimum. Thus, you can put a certain weight on\
+ the importance not to have too strong fluctuations\
+ in the final spectrum. We recommend a weight-factor\
+ of 0.2 (valid range is 0.0 - 0.5)\
+\
+Weight on fluctuations <0.2>:\
+ Row:   0  Mode: n  Area:        0(        0)  Chi:   0.00  Fluct:  1.00\
+ Row:   1  Mode: n  Area:        0(        0)  Chi:   0.00  Fluct:  1.00\
+ Row:   2  Mode: n  Area:        0(        0)  Chi:   0.00  Fluct:  1.00\
+ Row:   3  Mode: n  Area:        0(        0)  Chi:   0.00  Fluct:  1.00\
+ Row:   4  Mode: d  Area:      698(      726)  Chi:   0.00  Fluct:  1.34\
+ Row:   5  Mode: d  Area:      327(      358)  Chi:   0.00  Fluct:  1.28\
+ Row:   6  Mode: d  Area:     3008(     3022)  Chi:   0.00  Fluct:  2.34\
+ Row:   7  Mode: d  Area:    44128(    44132)  Chi:   0.00  Fluct: 18.22\
+ Row:   8  Mode: r  Area:   150364(   150369)  Chi:   0.00  Fluct: 70.54\
+ Row:   9  Mode: d  Area:   149663(   149667)  Chi:   0.00  Fluct:  1.44..\
+.. \
+ Row: 263  Mode: d  Area:    71032(    71450)  Chi:   0.16  Fluct:  7.18\
+ Row: 264  Mode: d  Area:    69731(    70153)  Chi:   0.15  Fluct:  6.92\
+ Row: 265  Mode: d  Area:    67453(    67873)  Chi:   0.15  Fluct:  6.77\
+ Row: 266  Mode: d  Area:    65708(    66135)  Chi:   0.15  Fluct:  7.91\
+ Row: 267  Mode: d  Area:    62981(    63382)  Chi:   0.12  Fluct:  6.84\
+ Row: 268  Mode: d  Area:    60410(    60846)  Chi:   0.13  Fluct:  7.49\
+ Row: 269  Mode: d  Area:    56827(    57253)  Chi:   0.14  Fluct:  7.25\
+ Row: 270  Mode: d  Area:    55004(    55413)  Chi:   0.11  Fluct:  7.08\
+ Row: 271  Mode: d  Area:    52369(    52793)  Chi:   0.11  Fluct:  7.36\
+ Row: 272  Mode: d  Area:    51231(    51642)  Chi:   0.11  Fluct:  7.54\
+ Row: 273  Mode: d  Area:    49808(    50224)  Chi:   0.11  Fluct:  6.57\
+ Row: 274  Mode: d  Area:    46998(    47422)  Chi:   0.09  Fluct:  7.49\
+ Row: 275  Mode: d  Area:    41562(    41975)  Chi:   0.07  Fluct:  6.38\
+ Row: 276  Mode: d  Area:    32283(    32723)  Chi:   0.04  Fluct:  5.65\
+ Row: 277  Mode: d  Area:    18641(    19038)  Chi:   0.02  Fluct:  2.36\
+ Row: 278  Mode: d  Area:     3754(     4013)  Chi:   0.01  Fluct:  1.50\
+ Row: 279  Mode: d  Area:        0(        3)  Chi:   0.00  Fluct:  1.01\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf0 ..\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0  Row: 499  Mode: n  Area:        0(        0)  Chi:   0.00  Fluct:  1.00\
+ Calibration is a0=   0.0keV, a1=  10.00keV/ch\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf0 Fill and remove negative counts (fn, rn)\
+..\
+..\
+\
+Compress matrix (co)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 mama>co\
+Destination spectrum <1>:\
+Source spectrum      <2>:\
+ Compression factors must be integer. With a factor\
+ of e.g. 3, channels 0,1,2,3 goes to 0,0,0,1\
+\
+Compression along x-axis <  1>:4\
+Compression along y-axis <  1>:\
+....................................................................  \
+New dimension (0: 399,0: 499)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf0 Make a partition (pa)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 mama>ds\
+mama>pa\
+Destination spectrum <2>:\
+Source spectrum      <1>:\
+\
+Lower marker on x-axis   <    0>:\
+Higher marker on x-axis  <  399>:300\
+\
+Lower marker on y-axis   <    0>:\
+Higher marker on y-axis  <  499>:300\
+New dimension (0: 300,0: 300)\
+mama>ds2
+\f2\b \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic Screen Shot 2015-11-11 at 13.56.39.png \width11480 \height6500
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\b\fs22 \cf0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Write unfolded matrix to disk\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 mama>wr\
+\
+Spectrum to write            <2>:\
+Singles spectrum                1\
+Set of spectra NA-0, NA-1,...   2\
+2-dimensional spectrum (matrix) 3\
+Please, choose your type     <3>:\
+\
+Cal. coeff. a0 (keV) on x-axis     <       15.0>:\
+Cal. coeff. a1 (keV/ch) on x-axis  <     40.000>:\
+Cal. coeff. a2 (keV/ch2) on x-axis < 0.0000E+00>:\
+\
+Cal. coeff. a0 (keV) on y-axis     <        0.0>:\
+Cal. coeff. a1 (keV/ch) on y-axis  <     40.000>:\
+Cal. coeff. a2 (keV/ch2) on y-axis < 0.0000E+00>:\
+\
+Dimension on x-axis (max=4096) < 301>:\
+Dimension on y-axis (max=2048)  < 301>:\
+Filename                       <TEST>:alfnaun\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28 \cf0 \ul 4. First generation gammas \CocoaLigature0 (\cf3 \ulnone MG2_OsloMeth_MSU2015.pptx\cf0 \ul )
+\b0 \ulnone \CocoaLigature1 \
+
+\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs22 \cf0  
+\f1 \CocoaLigature0 mama>fg                           \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0  The original gamma-matrix should be stored in\
+ the source matrix and the extracted 1.gen. matrix\
+ will appear in the destination spectrum. The last\
+ weighting functions used can be accessed from the\
+ response matrix using the command GR\
+  \
+Destination spectrum <1>:\
+Source spectrum      <2>:\
+\
+Calibration for gamma-energies:\
+Cal. coeff. a0 (keV) on x-axis   <    15.0>:\
+Cal. coeff. a1 (keV/ch) on x-axis<    40.0>:\
+\
+Calibration for excitation energies:\
+Cal. coeff. a0 (keV) on y-axis   <     0.0>:\
+Cal. coeff. a1 (keV/ch) on y-axis<    40.0>:\
+\
+Excitation energy of highest gate (keV)  < 12000.0>:11000\
+\
+Normalization: singles(1) or multiplicity(2)    <2>:\
+Multiplicity:  statistical(1) or total(2)       <1>:2\
+Area correction for 1. gen. spectra (y/n)       <y>:\
+Experimental lower gamma thresholds (keV)  <  200.>:300\
+Upper threshold for nonstat. gammas (keV)  <  430.>:300\
+Average entry point in ground band (keV)   <    0.>:\
+\
+It is recommended to use a sliding upper threshold when the\
+excitation energy is lower than 1 - 2 MeV. This is performed\
+by defining a ratio R, giving Thres=Ex*R with a lower and\
+higher limit of 300. and 300. keV. Use R = 0.2 - 0.3.\
+\
+Give ratio R           (no sliding = 100.) <  0.30>:\
+\
+First geneneration spectra extracted for\
+excitation energies between 11000.-    0. keV\
+corresponding to y-channels   275 -    0\
+\
+You may read weighting functions from disk\
+Weighting by exp. 1. gen. spectra (y/n)         <n>:\
+\
+Assumes Fermi gas distribution\
+Level density parameter a (1/MeV)           <16.00>:6\
+Exponent n for Eg**n                        < 4.20>:\
+\
+ Multiplicity in each gate: \
+ -----------------------------------\
+ Y-ch= 275 Ex= 11000.0 keV < 9.130>:\
+ Y-ch= 274 Ex= 10960.0 keV < 8.673>:\
+ Y-ch= 273 Ex= 10920.0 keV < 8.658>:\
+.. \
+ Y-ch=  85 Ex=  3400.0 keV < 1.931>:\
+ Y-ch=  84 Ex=  3360.0 keV < 1.968>:\
+ Y-ch=  83 Ex=  3320.0 keV < 1.927>:\
+ Y-ch=  82 Ex=  3280.0 keV < 1.903>:\
+ Y-ch=  81 Ex=  3240.0 keV < 1.834>:\
+ Y-ch=  80 Ex=  3200.0 keV < 1.630>:\
+ Y-ch=  79 Ex=  3160.0 keV < 1.512>:\
+ Y-ch=  78 Ex=  3120.0 keV < 1.538>:\
+ Y-ch=  77 Ex=  3080.0 keV < 1.527>:\
+ Y-ch=  76 Ex=  3040.0 keV < 1.517>:\
+ Y-ch=  75 Ex=  3000.0 keV < 1.823>:\
+ Y-ch=  74 Ex=  2960.0 keV < 1.936>:\
+ Y-ch=  73 Ex=  2920.0 keV < 1.815>:\
+ Y-ch=  72 Ex=  2880.0 keV < 1.775>:\
+.. \
+ Y-ch=   5 Ex=   200.0 keV < 0.458>:\
+ Y-ch=   4 Ex=   160.0 keV < 0.355>:\
+ Y-ch=   3 Ex=   120.0 keV < 0.000>:\
+ Y-ch=   2 Ex=    80.0 keV < 0.000>:\
+ Y-ch=   1 Ex=    40.0 keV < 0.000>:\
+ Y-ch=   0 Ex=     0.0 keV < 0.000>:\
+ \
+ -----------------------------------
+\f0 \CocoaLigature1  -----------------------------------\
+\'85\'85\
+\
+
+\f1 \CocoaLigature0 Y-ch=   1  Ex=     40.  Area=         0.0  Alpha=   1.00  dA/A(%)=  9999.99\
+Y-ch=   0  Ex=      0.  Area=         0.0  Alpha=   1.00  dA/A(%)=  9999.99\
+----------------------------------------------\
+\
+Iteration loop = 20, stop(0), activate/modify direct decay(1) or continue(2)  <2>:0\
+Last iteration 20 stored in matrix 1\
+Additional results written to figegaout.dat\
+\
+mama>ds2\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf0 \CocoaLigature0 Fill and remove negative counts (fn, rn)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 \CocoaLigature1 ..\
+..\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \CocoaLigature0 mama>ds2\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic Screen Shot 2015-11-11 at 13.57.58.png \width11440 \height6460
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf0 \CocoaLigature0 Write first-generation matrix to disk
+\f0\b0 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \CocoaLigature0 mama>wr\
+\
+Spectrum to write            <1>:\
+Singles spectrum                1\
+Set of spectra NA-0, NA-1,...   2\
+2-dimensional spectrum (matrix) 3\
+Please, choose your type     <3>:\
+\
+Cal. coeff. a0 (keV) on x-axis     <       15.0>:\
+Cal. coeff. a1 (keV/ch) on x-axis  <     40.000>:\
+Cal. coeff. a2 (keV/ch2) on x-axis < 0.0000E+00>:\
+\
+Cal. coeff. a0 (keV) on y-axis     <        0.0>:\
+Cal. coeff. a1 (keV/ch) on y-axis  <     40.000>:\
+Cal. coeff. a2 (keV/ch2) on y-axis < 0.0000E+00>:\
+\
+Dimension on x-axis (max=4096) < 301>:\
+Dimension on y-axis (max=2048)  < 301>:\
+Filename                       <TEST>:fg
+\f0\fs24 \CocoaLigature1 \
+\
+
+\b Stop mama (st)
+\f1\b0\fs22 \CocoaLigature0 \
+mama>st
+\f0\fs24 \CocoaLigature1 \
+
+\f1\fs22 \CocoaLigature0 Are you sure you want to exit? (y/n)y\
+\
+\
+*************\
+Try to get away vertical white line in fg\
+Read in alfnaun\
+Locate the bad guy\
+Eliminate the bad guy\
+\
+mama>ex                           \
+ Click two times for proper markers in matrix\
+mama>cr                           \
+Type X or click on green button to exit\
+x=   42, energy =   1695.000 keV  \
+y=   64, energy =   2560.000 keV\
+Number of counts=  0.561851E+02\
+x=   47, energy =   1895.000 keV  \
+y=   68, energy =   2720.000 keV\
+Number of counts=  0.459987E+02\
+\
+mama>rd\
+ Give coordinates for the corners of the rektangel\
+ that defines the background of the 2-dim peak\
+  \
+     (x1,y2)-----------(x2,y2)\
+         |      xxx       |\
+         |      xxx       |\
+         |   xxxxxxxxxx   |\
+         |  xxxxxxxxxxxx  |\
+         |  xxxxxxxxxxxx  |\
+         |   xxxxxxxxxx   |\
+         |      xxxx      |\
+     (x1,y1)-----------(x2,y1)\
+  \
+\
+Give x1 < 100>:42\
+Give x2 < 120>:47\
+Give y1 < 200>:64\
+Give y2 < 230>:68\
+ We need a region on y-axis where the shape of the gamma-peak can be determined\
+ Give lower (L1) and higher (L2) channel on y-axis\
+  \
+     (x1,y2)-----------(x2,y2)\
+         |      xxx       |\
+         |      xxx       |\
+     L2  |   xxxxxxxxxx   |\
+         |  xxxxxxxxxxxx  |\
+         |  xxxxxxxxxxxx  |\
+     L1  |   xxxxxxxxxx   |\
+         |      xxxx      |\
+     (x1,y1)-----------(x2,y1)\
+  \
+\
+Give L1 <  65>:\
+Give L2 <  67>:\
+mama>ds\
+mama>ds 2\
+\
+Run fg again\
+Call the first generation spectrum fgrd\
+Now ready for rhosigchi\
+*************\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28 \cf0 \ul 5. Rhosigchi\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b0\fs22 \cf0 \ulnone \CocoaLigature0  \
+magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>rhosigchi\
+  ________________________________________\
+ |                                        |\
+ |         R H O S I G C H I  1.5.1       |\
+ |                                        |\
+ |  Program to calculate level density    |\
+ | Rho, and gamma strength function Sig   |\
+ | from first-generation spectra, using   |\
+ |   FgNorm(Ex,Eg)=Rho(Ex-Eg)*Sig(Eg)     |\
+ |                                        |\
+ |      Oslo Cyclotron Laboratory         |\
+ |                                        |\
+ |        Created: 13/08 - 1999           |\
+ |           Andreas Schiller             |\
+ |  Lisbeth Bergholt, Magne Guttormsen    |\
+ |                                        |\
+ |        Improved: 01/05 - 2003          |\
+ |           Alexander Voinov             |\
+ |  Magne Guttormsen, Andreas Schiller    |\
+ |        Dubna, Oslo, Livermore          |\
+ |  Modified 28 Mar 2014: Ex < 0 MeV      |\
+ |  Modified 13 Feb 2015: One ch shift,   |\
+ |  ch ig < 0, cut igmax                  |\
+ |  Modified 31 Aug 2015: No normalization|\
+ |________________________________________|\
+ Please, answer 1 and the name of your input first-\
+ generation matrix in the two next questions... \
+Destination spectrum <1>:    \
+Filename          <TEST>:fgrd\
+ FILE=Disk\
+ KIND=Spectrum\
+ LABORATORY=Oslo Cyclotron Laboratory (OCL)\
+ EXPERIMENT=mama\
+ COMMENT=C:FN:RN:UN:FN:RN:CO:4-1PA:0-300,0-300|RE:alfnaunRD:FG:FN:RN:\
+ TIME=DATE:11-Nov-15 11:32:31[\
+ CALIBRATION EkeV=6, 0.150000E+02, 0.400000E+02, 0.000000E+00, 0.000000E+00, 0.400000E+02, 0.000000E+00\
+ PRECISION=16\
+ DIMENSION=2,0: 300,0: 300\
+ CHANNEL=(0: 300,0: 300)\
+......  \
+Lower limit of gamma energy (keV)      < 1800.0>:\
+Lower limit of excitation energy (keV) < 4560.0>:\
+Upper limit of excitation energy (keV) < 8520.0>:7646\
+ Number of data points        1034\
+ DOF, data points - rho - sig         954\
+Common calibration is a0=-840.00keV and a1= 120.00keV/ch\
+Dimension is 102 x  72\
+excitation energy region is  4560.keV to   7680.keV\
+rho extracted from  -840.keV to   5880.keV\
+sig extracted from  1800.keV to  11280.keV\
+ _______________________________________________________\
+        Convergence test using various indicators\
+Indicator Iteration = 0    10    20    30    40    50\
+Rho/Rho0 at  U=1200.  1.00  0.96  0.98  0.98  0.97  0.97\
+Rho/Rho0 at  U=3360.  1.00  1.23  1.21  1.19  1.16  1.16\
+Rho/Rho0 at  U=5520.  1.00  0.37  0.38  0.41  0.42  0.42\
+Sig/Sig0 at Eg=3360.  1.00  0.84  0.83  0.82  0.82  0.82\
+Sig/Sig0 at Eg=5520.  1.00  0.82  0.82  0.81  0.80  0.80\
+Chi^2 for 1.gen.sp.  24.98  3.11  2.81  2.73  2.70  2.70\
+ _______________________________________________________\
+\
+ ch   Ex(keV)     Rho(1/MeV)  dRho(1/MeV) (UNNORMALIZED)\
+    0  -840.0     0.000E+00   0.000E+00\
+    1  -720.0     0.000E+00   0.000E+00\
+    2  -600.0     0.000E+00   0.000E+00\
+    3  -480.0     0.000E+00   0.000E+00\
+    4  -360.0     0.872E-01   0.000E+00\
+    5  -240.0     0.140E+00   0.202E-01\
+    6  -120.0     0.109E+01   0.346E-01\
+    7     0.0     0.240E+01   0.413E-01\
+    8   120.0     0.237E+01   0.336E-01\
+    9   240.0     0.162E+01   0.310E-01\
+   10   360.0     0.125E+01   0.335E-01\
+   11   480.0     0.831E+00   0.277E-01\
+   12   600.0     0.827E+00   0.295E-01\
+   13   720.0     0.107E+01   0.309E-01\
+   14   840.0     0.845E+00   0.313E-01\
+   15   960.0     0.872E+00   0.308E-01\
+..  \
+   49  5040.0     0.646E+00   0.967E-01\
+   50  5160.0     0.624E+00   0.885E-01\
+   51  5280.0     0.521E+00   0.841E-01\
+   52  5400.0     0.426E+00   0.744E-01\
+   53  5520.0     0.422E+00   0.889E-01\
+   54  5640.0     0.464E+00   0.814E-01\
+   55  5760.0     0.416E+00   0.107E+00\
+   56  5880.0     0.556E+00   0.191E+00\
+\
+ ch   Eg(keV)         Sig        dSig (UNNORMALIZED)\
+   22  1800.0     0.579E+00   0.318E-01\
+   23  1920.0     0.665E+00   0.327E-01\
+   24  2040.0     0.638E+00   0.331E-01\
+   25  2160.0     0.658E+00   0.302E-01\
+   26  2280.0     0.573E+00   0.302E-01\
+   27  2400.0     0.463E+00   0.254E-01\
+..  \
+   60  6360.0     0.555E+00   0.749E-01\
+   61  6480.0     0.566E+00   0.779E-01\
+   62  6600.0     0.575E+00   0.794E-01\
+   63  6720.0     0.574E+00   0.828E-01\
+   64  6840.0     0.601E+00   0.871E-01\
+   65  6960.0     0.579E+00   0.924E-01\
+   66  7080.0     0.707E+00   0.108E+00\
+   67  7200.0     0.638E+00   0.962E-01\
+   68  7320.0     0.514E+00   0.804E-01\
+   69  7440.0     0.482E+00   0.769E-01\
+   70  7560.0     0.491E+00   0.813E-01\
+   71  7680.0     0.361E+00   0.734E-01\
+   72  7800.0     0.000E+00   0.000E+00\
+   73  7920.0     0.000E+00   0.000E+00\
+   74  8040.0     0.000E+00   0.000E+00\
+Observed first generation matrix written to file:     fg.rsg     \
+Estimated first gen. err. matrix written to file:  fgerr.rsg  \
+Theoret. first generation matrix written to file:  fgteo.rsg  \
+Unnormalized Rho and dRho written to array file:  rhopaw.rsg \
+Unnormalized T and dT     written to array file:  sigpaw.rsg \
+Unnormalized Rho and dRho written to mama file:    rhosp.rsg  \
+Unnormalized T and dT     written to mama file:    sigsp.rsg\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+
+\b\fs28 \ul 6. Robin
+\b0\fs24 \
+\ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>robin\
+     __________________________________________\
+    |                                          |\
+    |                 ROBIN 1.7                |\
+    |                                          |\
+    |  Program to calculate the level density  |\
+    |         and spin cut-off parameter       |\
+    |       at Rho(Bn) for a nucleus with      |\
+    | given proton number Z and mass number A. |\
+    |       See T. Egidy and Bucurescu:        |\
+    |                                          |\
+    |    (E&B2009): PRC 80, 054310 (2009)      |\
+    |                                          |\
+    |    (E&B2006): PRC 72, 044311 (2005) and  |\
+    |               PRC 73, 049901 (E) (2006)  |\
+    |                                          |\
+    |        Oslo Cyclotron Laboratory         |\
+    |             Magne Guttormsen             |\
+    |            Created: 13 Jun 2005          |\
+    |           Modified: 14 Sep 2012          |\
+    |           Modified: 25 Mar 2013          |\
+    |__________________________________________|\
+  \
+ Reading file /Applications/prog/lib/egidy03/mass.mas03                                                                                                                                                                                                                      \
+ Number of nuclei read is        3179  with last (A,Z) = (         293 ,         118 )\
+ Reading file /Applications/prog/lib/egidy03/rct2.mas03                                                                                                                                                                                                                      \
+ Number of nuclei read is        3179  with last (A,Z) = (         293 ,         118 )\
+ Reading file /Applications/prog/lib/egidy03/rct7.mas03                                                                                                                                                                                                                      \
+ Number of nuclei read is        3179  with last (A,Z) = (         293 ,         118 )\
+  \
+ Please, check that the same number of nuclei is read.\
+ (If not, mismatch of values will give wrong results.)\
+  \
+Give proton number of the nucleus < 26>:\
+Give mass number of the nucleus   < 57>:\
+  \
+ You should take care to use formulas from the same reference.\
+ Example: If you use rigid moment of inertia from (E&B2006),\
+ you should also use temperature T from (E&B2006), as well.\
+ We recommend to use (E&B2006) (or maybe the old (G&C)) for nuclei heavier than A > 150,\
+ and (E&B2009) for lighter nuclei with A < 150.\
+  \
+ You may choose between 4 spin cut-off formulas:\
+ 1 The rigid moment of inertia formula (RMI)(E&B2006)\
+ 2 The Gilbert and Cameron formula (G&C) Can. J. Phys 43(1965) 1446\
+ 3 The constant temperature (CT) formula (E&B2009) and NPA 481 (1988) 189\
+ 4 The Fermi gas formula with appropriate cut-off parameter (E&B2009)\
+ Type 1 for RMI: sig**2=0.0146*(A**(5/3))*T for FG (E&B2006)\
+ Type 2 for G&C: sig**2=0.0888*(A**(2/3))*a*T for FG\
+ Type 3 for E&B: sig**2=(0.98*(A**(0.29)))**2 for CT\
+ Type 4 for E&B: sig**2=0.391*A**0.675*(E-0.5*Pa_prime)**0.312 for FG\
+Choose RMI(FG) (1), G&C(FG) (2), E&B(CT) (3) or E&B(FG) (4)  <4>:\
+  \
+ You may choose another a and/or E1 than proposed by E&B:\
+Level density parameter a    <  6.296>:\
+Total backshift parameter E1 < -0.276>:\
+  \
+Shell values            : S=     -1.294 MeV,   dS/dA= -0.083 MeV\
+Pairing energies        : P_n=    1.487 MeV,   P_p=    1.268 MeV, P_d=  -0.211 MeV, Pa_prime=   0.211 MeV\
+Binding energies        : B_n=    7.646 MeV,   B_p=   10.559 MeV\
+Fermi gas parameters    : a=      6.296 1/MeV, E1=    -0.276 MeV\
+Spin cut-off parameters : sig_n=  3.354        sig_p=  3.529\
+Level densities         : rho_n= 0.11366E+04 1/MeV, rho_p= 0.80035E+04 1/MeV\
+Calculate rho and sigma at Ex (MeV)  <  7.646>:\
+For Ex =  7.646 MeV     : rho  = 0.11366E+04 1/MeV, sig =  3.354\
+Write file with spin distribution for spin cut-off sig = <  3.834>:\
+  \
+File spindis.rbn written with <I> = 4.33, Pmax @ I = 3.5 and sum_P =0.994\
+magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+
+\b\fs28 \ul 7. D2rho
+\b0\fs24 \
+\ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>d2rho\
+\
+  ______________________________________________________________ \
+ |                                                              |\
+ |                          D2RHO 1.1.3                         |\
+ |                                                              |\
+ |   Program to calculate level density from level spacing D    |\
+ |  at Bn, Bp or Ex. The resonance capture levels are formed by |\
+ |           neutron or proton s (l=0) or p-waves (l=1)         |\
+ |            (based on neutron.f by Andreas Schiller)          |\
+ |                                                              |\
+ |  Input files: (input.d2r)          Output files: input.d2r   |\
+ |                                                              |\
+ | E-mail  : magne.guttormsen@fys.uio.no                        |\
+ | Created : 15 Dec 2006                                        |\
+ | Modified: 17 Mar 2007                                        |\
+ | Modified: 05 Nov 2012                                        |\
+ |______________________________________________________________|\
+                                                                 \
+ The spin cut-off parameter sigma can be found in two ways (A) or (B).\
+ For the uncertainty, use about 10 percent of sigma\
+ \
+ (A) The easiest and recommended way:\
+ Run the ROBIN program and find sigma (use option 4)\
+ \
+ (B) Very old, but values are a sort of standards:\
+ Take Tables I or II (pages 1448-1450) from the article:\
+ A. Gilbert, A.G.W. Cameron, Can. Jour. Phys. 43(1965)1446\
+ Note: Take the row on the left side with target nucleus A-1\
+ in the neutron capture. This is one less mass number\
+ than the nucleus (A) that you investigate. If the nucleus\
+ is not listed there, find another reference...\
+\
+s- (l=0) or p- (l=1) wave neutron/proton capture                    <0>:\
+Target spin in (n,g) or (p,g) reaction (for the A-1 nucleus)     < 0.0>:\
+Neutron or proton resonance spacing parameter D (eV)        < 25400.00>:\
+Standard deviation for resonance spacing parameter dD (eV)  <  1700.00>:2200\
+Spin cut-off parameter sigma                                <     3.35>:\
+Standard deviation of spin cut-off parameter sigma          <     0.33>:\
+\
+Spin populated in nucleus A:  1/2. Parity = parity of gs of nucleus A-1\
+Level density is rho = 9.260E+02 +/- 1.917E+02 1/MeV\
+(This level density is the total density defined as\
+twice the level density obtained for one parity, where we\
+asssume equal number of positive and negative parity states.\
+If you know D's for l=0 and l=1, the total level density is\
+rho(total) = 0.5*rho(l=0) + 0.5*rho(l=1))\
+magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+
+\b\fs28 \ul 8. Counting
+\b0\fs24 \
+\ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>counting\
+\
+  ______________________________________________________________ \
+ |                                                              |\
+ |                    C O U N T I N G   1.7.2                   |\
+ |                                                              |\
+ |Program to normalize experimental nuclear level density (NLD) |\
+ |  to NLD from known low energy levels and NLD extracted from  |\
+ |     resonances spacing data at Bn. Thus, the A and alpha     |\
+ |     parameters are determined for NLD. The slope of the      |\
+ |   transmision coefficient T(Eg) is normalized according to   |\
+ |                    the alpha parameter.                      |\
+ |                                                              |\
+ |  Input files:  counting.dat    Output files: rhopaw.cnt      |\
+ |                rhosp.rsg                     rhotmopaw.cnt   |\
+ |                sigsp.rsg                     sigpaw.cnt      |\
+ |                rhopaw.rsg                    input.cnt       |\
+ |                sigpaw.rsg                    spincut.cnt     |\
+ |               (input.cnt)                    fermigas.cnt    |\
+ |                                              efit.f          |\
+ |                                              counting.cpp    |\
+ |                                              spincut.cpp     |\
+ |                                              sigext.cpp      |\
+ |                                                              |\
+ |  Fermi gas or constant temperatur parameteres are calculated |\
+ |      from Egidy and Bucurescu: PRC 80, 054310 (2009)         |\
+ | E-mail  : magne.guttormsen@fys.uio.no                        |\
+ | Created : 11 Aug 2006                                        |\
+ | Modified: 17 Jun 2009                                        |\
+ | Modified: 16 Nov 2014 Ex < 0 MeV, CT output, CT with sig_FG  |\
+ | Modified: 10 Feb 2015 dimRhox, dimSigx                       |\
+ | Modified: 01 Jun 2015 allow modifying ExL and ExH of sigext  |\
+ | Modified: 28 Aug 2015 ? replaced by " for root scripts       |\
+ | and deleting kumac output files                              |\
+ |______________________________________________________________|\
+                                                                 \
+Reading calibration and dimensions from: rhosp.rsg\
+rhosp.rsg has dimension (0 : 71, 0 : 1) and calibration (a0, a1) = (-840.000000, 120.000000)\
+Reading calibration and dimensions from: sigsp.rsg\
+sigsp.rsg has dimension (0 : 101, 0 : 1) and calibration (a0, a1) = (-840.000000, 120.000000)\
+\
+Reading data and errors of experimental nuclear level density: rhopaw.rsg\
+ No   Ex(keV)      Rho(1/MeV)     dRho(1/MeV)\
+  0   -840.00       0.000e+00       0.000e+00 \
+  1   -720.00       0.000e+00       0.000e+00 \
+  2   -600.00       0.000e+00       0.000e+00 \
+  3   -480.00       0.000e+00       0.000e+00 \
+  4   -360.00       8.724e-02       0.000e+00 \
+  5   -240.00       1.395e-01       2.021e-02 \
+  6   -120.00       1.095e+00       3.465e-02 \
+  7      0.00       2.397e+00       4.130e-02 \
+  8    120.00       2.367e+00       3.359e-02 \
+  9    240.00       1.622e+00       3.103e-02 \
+ 10    360.00       1.253e+00       3.346e-02 \
+ 11    480.00       8.307e-01       2.768e-02 \
+ 12    600.00       8.271e-01       2.955e-02 \
+ 13    720.00       1.070e+00       3.092e-02 \
+ 14    840.00       8.452e-01       3.132e-02 \
+ 15    960.00       8.722e-01       3.078e-02 \
+..\
+ 50   5160.00       6.243e-01       8.853e-02 \
+ 51   5280.00       5.212e-01       8.407e-02 \
+ 52   5400.00       4.260e-01       7.442e-02 \
+ 53   5520.00       4.215e-01       8.890e-02 \
+ 54   5640.00       4.638e-01       8.144e-02 \
+ 55   5760.00       4.160e-01       1.068e-01 \
+ 56   5880.00       5.559e-01       1.914e-01 \
+ 57   6000.00       0.000e+00       0.000e+00 \
+ 58   6120.00       0.000e+00       0.000e+00 \
+ 59   6240.00       0.000e+00       0.000e+00 \
+ 60   6360.00       0.000e+00       0.000e+00 \
+ 61   6480.00       0.000e+00       0.000e+00 \
+ 62   6600.00       0.000e+00       0.000e+00 \
+ 63   6720.00       0.000e+00       0.000e+00 \
+ 64   6840.00       0.000e+00       0.000e+00 \
+ 65   6960.00       0.000e+00       0.000e+00 \
+ 66   7080.00       0.000e+00       0.000e+00 \
+ 67   7200.00       0.000e+00       0.000e+00 \
+ 68   7320.00       0.000e+00       0.000e+00 \
+ 69   7440.00       0.000e+00       0.000e+00 \
+ 70   7560.00       0.000e+00       0.000e+00 \
+ 71   7680.00       0.000e+00       0.000e+00 \
+\
+Reading data and errors of experimental transmision coefficient: sigpaw.rsg\
+ No   Eg(keV)         Trans           dTrans\
+  0   -840.00       0.000e+00       0.000e+00 \
+  1   -720.00       0.000e+00       0.000e+00 \
+  2   -600.00       0.000e+00       0.000e+00 \
+  3   -480.00       0.000e+00       0.000e+00 \
+  4   -360.00       0.000e+00       0.000e+00 \
+  5   -240.00       0.000e+00       0.000e+00 \
+  6   -120.00       0.000e+00       0.000e+00 \
+  7      0.00       0.000e+00       0.000e+00 \
+  8    120.00       0.000e+00       0.000e+00 \
+  9    240.00       0.000e+00       0.000e+00 \
+ 10    360.00       0.000e+00       0.000e+00 \
+ 11    480.00       0.000e+00       0.000e+00 \
+ 12    600.00       0.000e+00       0.000e+00 \
+ 13    720.00       0.000e+00       0.000e+00 \
+ 14    840.00       0.000e+00       0.000e+00 \
+ 15    960.00       0.000e+00       0.000e+00 \
+ 16   1080.00       0.000e+00       0.000e+00 \
+.. \
+ 53   5520.00       4.177e-01       4.659e-02 \
+ 54   5640.00       4.324e-01       5.105e-02 \
+ 55   5760.00       4.896e-01       6.229e-02 \
+ 56   5880.00       5.903e-01       7.386e-02 \
+ 57   6000.00       6.964e-01       8.869e-02 \
+ 58   6120.00       8.064e-01       1.063e-01 \
+ 59   6240.00       6.981e-01       9.723e-02 \
+ 60   6360.00       5.550e-01       7.494e-02 \
+ 61   6480.00       5.664e-01       7.787e-02 \
+ 62   6600.00       5.747e-01       7.944e-02 \
+ 63   6720.00       5.737e-01       8.279e-02 \
+ 64   6840.00       6.010e-01       8.715e-02 \
+ 65   6960.00       5.793e-01       9.241e-02 \
+ 66   7080.00       7.074e-01       1.080e-01 \
+ 67   7200.00       6.382e-01       9.621e-02 \
+ 68   7320.00       5.143e-01       8.040e-02 \
+ 69   7440.00       4.819e-01       7.694e-02 \
+ 70   7560.00       4.915e-01       8.133e-02 \
+ 71   7680.00       3.610e-01       7.342e-02 \
+..\
+100  11160.00       0.000e+00       0.000e+00 \
+101  11280.00       0.000e+00       0.000e+00 \
+\
+Reading excitation energies of known levels: counting.dat\
+Binning 178 known levels:\
+ No   Ex(keV)   NoLev   RhoLeV(1/MeV)\
+  0   -840.00       0       0.000e+00\
+  1   -720.00       0       0.000e+00\
+  2   -600.00       0       0.000e+00\
+  3   -480.00       0       0.000e+00\
+  4   -360.00       0       0.000e+00\
+  5   -240.00       0       0.000e+00\
+  6   -120.00       0       0.000e+00\
+  7      0.00       2       1.667e+01\
+  8    120.00       1       8.333e+00\
+  9    240.00       0       0.000e+00\
+ 10    360.00       1       8.333e+00\
+ 11    480.00       0       0.000e+00\
+ 12    600.00       0       0.000e+00\
+ 13    720.00       1       8.333e+00\
+ 14    840.00       0       0.000e+00\
+ 15    960.00       1       8.333e+00\
+ 16   1080.00       1       8.333e+00\
+..\
+ 60   6360.00       5       4.167e+01\
+ 61   6480.00       3       2.500e+01\
+ 62   6600.00       4       3.333e+01\
+ 63   6720.00       3       2.500e+01\
+ 64   6840.00       0       0.000e+00\
+ 65   6960.00       0       0.000e+00\
+ 66   7080.00       0       0.000e+00\
+ 67   7200.00       0       0.000e+00\
+ 68   7320.00       0       0.000e+00\
+ 69   7440.00       0       0.000e+00\
+ 70   7560.00       0       0.000e+00\
+ 71   7680.00       1       8.333e+00\
+ 72   7800.00       0       0.000e+00\
+Mass number A             < 57>:\
+Neutron or proton binding energy (Bn or Bp) (MeV)  < 7.646>:\
+\
+\
+Choose constant temperature CT (1) or Fermi gas FG (2) formula <1>:\
+\
+\
+You should take care to use formulas from the same reference.\
+Example: If you use rigid moment of inertia from (E&B2006),\
+you should also use temperature T from (E&B2006), as well.\
+We recommend to use (E&B2006) (or maybe the old (G&C)) for nuclei heavier than A > 150,\
+and (E&B2009) for lighter nuclei with A < 150.\
+\
+If you have chosen the CT formula, we recommend to use FG spin cut-off formula since\
+the CT spin cut-off formula is a constant, which is rather unphysical. In the following,\
+option (1) might be the most appropriate for the CT-model (instead of (3)).\
+\
+You may choose between 4 spin cut-off formulas:\
+1 The rigid moment of inertia formula (RMI) (E&B2006)\
+2 The Gilbert and Cameron formula (G&C) Can. J. Phys 43(1965) 1446\
+3 The constant temperature (CT) formula (E&B2009) and NPA 481 (1988) 189\
+4 The Fermi gas formula with appropriate cut-off parameter (E&B2009)\
+Type 1 for RMI: sig**2=0.0146*(A**(5/3))*T for FG+CT (E&B2006)\
+Type 2 for G&C: sig**2=0.0888*(A**(2/3))*a*T for FG+CT\
+Type 3 for E&B: sig**2=(0.98*(A**(0.29)))**2 for CT\
+Type 4 for E&B: sig**2=0.391*A**0.675*(E-0.5*Pa_prime)**0.312 for FG+CT\
+\
+\
+Choose RMI(FG+CT) (1), G&C(FG+CT) (2), E&B(CT) (3) or E&B(FG+CT) (4) <4>:\
+\
+Be sure to use the correct Rho(Bn or Bp) according\
+to type 1, 2, 3 or 4. Run the d2rho program to find Rho\
+or use the systematic value found by running Robin\
+Level density at Bn or Bp (1/MeV)                <     926>:\
+Uncertainty of level density at Bn or Bp (1/MeV) <     192>:\
+\
+You need to run the program Robin to get the Fermi-gas parameters a and E1:\
+Level density parameters a (1/MeV) <  6.296>:\
+Fermi-gas shift parameter E1 (MeV) < -0.276>:\
+\
+You need to run the program Robin to get the constant temperature parameters T:\
+Temperature parameter T (MeV) <  1.400>:\
+\
+The level density goes through Rho(Bn), thus determining the\
+const. temp. shift parameter to be E0 =  -2.388 MeV\
+\
+ No   Ex(keV)   RhoLeV(1/MeV)\
+  0   -840.00       0.000e+00\
+  1   -720.00       0.000e+00\
+  2   -600.00       0.000e+00\
+  3   -480.00       0.000e+00\
+  4   -360.00       0.000e+00\
+  5   -240.00       0.000e+00\
+  6   -120.00       0.000e+00\
+-----------------------------\
+  7      0.00       1.667e+01\
+  8    120.00       8.333e+00\
+  9    240.00       0.000e+00\
+ 10    360.00       8.333e+00\
+ 11    480.00       0.000e+00\
+ 12    600.00       0.000e+00\
+ 13    720.00       8.333e+00\
+ 14    840.00       0.000e+00\
+ 15    960.00       8.333e+00\
+ 16   1080.00       8.333e+00\
+ 17   1200.00       8.333e+00\
+ 18   1320.00       1.667e+01\
+ 19   1440.00       0.000e+00\
+ 20   1560.00       0.000e+00\
+ 21   1680.00       1.667e+01\
+ 22   1800.00       0.000e+00\
+ 23   1920.00       8.333e+00\
+-----------------------------\
+ 24   2040.00       1.667e+01\
+ 25   2160.00       3.333e+01\
+ 26   2280.00       1.667e+01\
+ 27   2400.00       3.333e+01\
+ 28   2520.00       2.500e+01\
+ 29   2640.00       2.500e+01\
+ 30   2760.00       8.333e+00\
+ 31   2880.00       5.000e+01\
+Lower fit limit L1 for known levels  <  7>:\
+Higher fit limit L2 for known levels < 23>:\
+\
+ No   Ex(keV)      Rho(1/MeV)     dRho(1/MeV)\
+ 43   4320.00       6.471e-01       7.619e-02 \
+ 44   4440.00       6.520e-01       7.966e-02 \
+ 45   4560.00       7.863e-01       8.981e-02 \
+ 46   4680.00       8.089e-01       1.027e-01 \
+ 47   4800.00       7.229e-01       8.839e-02 \
+ 48   4920.00       6.490e-01       9.078e-02 \
+ 49   5040.00       6.464e-01       9.675e-02 \
+ 50   5160.00       6.243e-01       8.853e-02 \
+---------------------------------------------\
+ 51   5280.00       5.212e-01       8.407e-02 \
+ 52   5400.00       4.260e-01       7.442e-02 \
+ 53   5520.00       4.215e-01       8.890e-02 \
+ 54   5640.00       4.638e-01       8.144e-02 \
+ 55   5760.00       4.160e-01       1.068e-01 \
+---------------------------------------------\
+ 56   5880.00       5.559e-01       1.914e-01 \
+ 57   6000.00       0.000e+00       0.000e+00 \
+ 58   6120.00       0.000e+00       0.000e+00 \
+ 59   6240.00       0.000e+00       0.000e+00 \
+ 60   6360.00       0.000e+00       0.000e+00 \
+ 61   6480.00       0.000e+00       0.000e+00 \
+ 62   6600.00       0.000e+00       0.000e+00 \
+ 63   6720.00       0.000e+00       0.000e+00 \
+Lower fit limit H1 for Rho around Bn or Bp  < 51>:52\
+Higher fit limit H2 for Rho around Bn or Bp < 55>:56\
+\
+ No   Eg(keV)         Trans           dTrans\
+  0   -840.00       0.000e+00       0.000e+00 \
+  1   -720.00       0.000e+00       0.000e+00 \
+  2   -600.00       0.000e+00       0.000e+00 \
+  3   -480.00       0.000e+00       0.000e+00 \
+  4   -360.00       0.000e+00       0.000e+00 \
+  5   -240.00       0.000e+00       0.000e+00 \
+  6   -120.00       0.000e+00       0.000e+00 \
+  7      0.00       0.000e+00       0.000e+00 \
+  8    120.00       0.000e+00       0.000e+00 \
+  9    240.00       0.000e+00       0.000e+00 \
+ 10    360.00       0.000e+00       0.000e+00 \
+ 11    480.00       0.000e+00       0.000e+00 \
+ 12    600.00       0.000e+00       0.000e+00 \
+ 13    720.00       0.000e+00       0.000e+00 \
+ 14    840.00       0.000e+00       0.000e+00 \
+ 15    960.00       0.000e+00       0.000e+00 \
+ 16   1080.00       0.000e+00       0.000e+00 \
+ 17   1200.00       0.000e+00       0.000e+00 \
+ 18   1320.00       0.000e+00       0.000e+00 \
+ 19   1440.00       0.000e+00       0.000e+00 \
+ 20   1560.00       0.000e+00       0.000e+00 \
+ 21   1680.00       0.000e+00       0.000e+00 \
+---------------------------------------------\
+ 22   1800.00       5.791e-01       3.179e-02 \
+ 23   1920.00       6.645e-01       3.271e-02 \
+ 24   2040.00       6.381e-01       3.310e-02 \
+ 25   2160.00       6.575e-01       3.023e-02 \
+ 26   2280.00       5.726e-01       3.017e-02 \
+ 27   2400.00       4.633e-01       2.538e-02 \
+ 28   2520.00       5.916e-01       2.871e-02 \
+ 29   2640.00       4.451e-01       2.469e-02 \
+---------------------------------------------\
+ 30   2760.00       2.955e-01       2.589e-02 \
+ 31   2880.00       4.050e-01       2.984e-02 \
+ 32   3000.00       4.995e-01       3.150e-02 \
+ 33   3120.00       4.369e-01       2.962e-02 \
+ 34   3240.00       5.022e-01       3.440e-02 \
+ 35   3360.00       5.202e-01       3.377e-02 \
+ 36   3480.00       5.196e-01       3.299e-02 \
+ 37   3600.00       5.794e-01       3.673e-02 \
+Lower fit limit L1 for low energy region of T(Eg)  < 22>:\
+Higher fit limit L2 for low energy region of T(Eg) < 29>:\
+\
+ No   Eg(keV)         Trans           dTrans\
+ 51   5280.00       4.993e-01       5.378e-02 \
+ 52   5400.00       4.532e-01       5.407e-02 \
+ 53   5520.00       4.177e-01       4.659e-02 \
+ 54   5640.00       4.324e-01       5.105e-02 \
+ 55   5760.00       4.896e-01       6.229e-02 \
+ 56   5880.00       5.903e-01       7.386e-02 \
+ 57   6000.00       6.964e-01       8.869e-02 \
+ 58   6120.00       8.064e-01       1.063e-01 \
+---------------------------------------------\
+ 59   6240.00       6.981e-01       9.723e-02 \
+ 60   6360.00       5.550e-01       7.494e-02 \
+ 61   6480.00       5.664e-01       7.787e-02 \
+ 62   6600.00       5.747e-01       7.944e-02 \
+ 63   6720.00       5.737e-01       8.279e-02 \
+ 64   6840.00       6.010e-01       8.715e-02 \
+ 65   6960.00       5.793e-01       9.241e-02 \
+---------------------------------------------\
+ 66   7080.00       7.074e-01       1.080e-01 \
+ 67   7200.00       6.382e-01       9.621e-02 \
+ 68   7320.00       5.143e-01       8.040e-02 \
+ 69   7440.00       4.819e-01       7.694e-02 \
+ 70   7560.00       4.915e-01       8.133e-02 \
+ 71   7680.00       3.610e-01       7.342e-02 \
+ 72   7800.00       0.000e+00       0.000e+00 \
+Lower fit limit H1 for high energy region of T(Eg)  < 59>:\
+Higher fit limit H2 for high energy region of T(Eg) < 65>:\
+\
+Fermi-gas level density has been multiplied with eta =  1.000\
+in order to match Rho(Bn or Bp) =    926.0 (1/MeV)\
+\
+Spin cut-off parameter used at Bn or Bp =  3.354\
+\
+First estimate of normalization parameters: A =  2.6332 and alpha = 0.9335\
+Improved Chi2 for lower part:  39.08 -> 28.97 with count correction = 1.328 \
+Improved Chi2 for higher part:  3.43 ->  0.24 with count correction = 1.005 \
+Final estimate of normalization parameters: A =  3.7027 and alpha = 0.8740\
+\
+File fermigas.cnt (0:72) written to disk, (a0,a1)=( -840.00, 120.000)\
+File rhotmopaw.cnt (0:833) written to disk, (a0,a1)=( -840.00, 120.000)\
+File rhopaw.cnt (0:145) written to disk, (a0,a1)=( -840.00, 120.000)\
+File sigpaw.cnt (0:145) written to disk, (a0,a1)=( -840.00, 120.000)\
+\
+ Transmission function sigext = exp(a*Eg + b) is fitted to the \
+ lower data points with result: Chi2 = 4.726155 a = 0.532308 b = 1.519070 \
+ Change a and b parameters? (0 = no, 1 = yes) <0>:\
+\
+ Transmission function sigext = exp(a*Eg + b) is fitted to the \
+ upper data points with result: Chi2 = 0.264424 a = 0.754477 b = 1.570187 \
+ Change a and b parameters? (0 = no, 1 = yes) <0>:\
+\
+File sigpawext.cnt (0:75) written to disk, (a0,a1)=( -840.00, 120.000)\
+File extendLH.cnt (0:75) (0:75) written to disk, (a0,a1)=( -840.00, 120.000)\
+File rholev.cnt (0:72) written to disk, (a0,a1)=( -840.00, 120.000)\
+File spincut.cnt (0:216) written to disk, (a0,a1)=( -840.00, 120.000)\
+File counting.cpp written to disk. Run root to plot normalized NLD.\
+File spincut.cpp written to disk. Run root to plot the spincut.\
+File sigext.cpp written to disk. Run root to plot sigextpaw.cnt.\
+magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+
+\b\fs28 \ul 9. Running root to display output from counting\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \ulnone \CocoaLigature0 magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>root -l counting.cpp\
+root [0] \
+Processing counting.cpp...\
+Info in <TCanvas::Print>: pdf file counting.pdf has been created\
+Info in <TCanvas::Print>: eps file counting.eps has been created\
+Info in <TCanvas::Print>: ps file counting.ps has been created\
+root [1] .x sigext.cpp\
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c1\
+Info in <TCanvas::Print>: pdf file sigext.pdf has been created\
+Info in <TCanvas::Print>: eps file sigext.eps has been created\
+Info in <TCanvas::Print>: ps file sigext.ps has been created\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic counting.pdf \width11340 \height10900
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic sigext.pdf \width11340 \height10900
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic spincut.pdf \width11340 \height10900
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+
+\b\fs28 \ul 10.  Normalization \CocoaLigature0 (\cf3 \ulnone MG_Ripl3D0Gg_MSU2015.rtf\cf0 \ul )
+\b0 \ulnone \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ulnone \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>normalization\
+\
+  ______________________________________________________________ \
+ |                                                              |\
+ |               N O R M A L I Z A T I O N  1.5.2               |\
+ |                                                              |\
+ |  Program to normalize the gamma-ray strength function f(Eg)  |\
+ |         to the total average radiation width Gamma           |\
+ |                     measured at Bn or Bp                     |\
+ |        (based on normalization.f by Andreas Schiller)        |\
+ |                                                              |\
+ |  Input files: rhotmopaw.cnt    Output files: input.nrm       |\
+ |               sigextpaw.cnt                  strength.nrm    |\
+ |               spincut.cnt                    trans.nrm       |\
+ |               sigpaw.cnt                     transext.nrm    |\
+ |               (input.nrm)                    strength.cpp    |\
+ |                                                              |\
+ | E-mail  : magne.guttormsen@fys.uio.no                        |\
+ | Created : 14 Nov 2006                                        |\
+ | Modified: 26 Mar 2014                                        |\
+ | Modified: 28 Aug 2015 replace ? and deleting kumac files     |\
+ |______________________________________________________________|\
+                                                                 \
+Reading calibration and dimensions from: rhosp.rsg\
+Dimension (0 : 71, 0 : 1) and calibration (a0, a1) = ( -840.00, 120.000)\
+s- (l=0) or p- (l=1) wave neutron/proton capture               <0>:\
+Neutron or proton binding energy (Bn or Bp) (MeV)         < 7.646>:\
+Target spin in (n,g) or (p,g) reaction (for the A-1 nucleus). Use\
+values 0.0, 1.0,... for even and 0.5, 1.5,... for odd spins < 0.0>:\
+Neutron resonance spacing parameter D (eV)                <25400.0>:\
+Average total radiative resonance width G (meV)           < 920.0>:\
+\
+Reading data of experimental nuclear level density: rhotmopaw.cnt\
+Reading data of experimental transmision coefficient: sigextpaw.cnt\
+Reading data and errors of experimental transmision coefficient: sigpaw.cnt\
+Reading spincutoff parameters: spincut.cnt\
+\
+ No Ex(keV) Rho(1/MeV)  2*Spincut**2  Eg(keV)    Sigext      Sigpaw      dSigpaw  \
+  0  -840.0  0.000e+00     2.85       -840.0    2.921e+00    0.000e+00 ( 0.000e+00)\
+  1  -720.0  0.000e+00     2.85       -720.0    3.114e+00    0.000e+00 ( 0.000e+00)\
+  2  -600.0  0.000e+00     2.85       -600.0    3.319e+00    0.000e+00 ( 0.000e+00)\
+  3  -480.0  0.000e+00     2.85       -480.0    3.538e+00    0.000e+00 ( 0.000e+00)\
+  4  -360.0  2.358e-01     2.85       -360.0    3.771e+00    0.000e+00 ( 0.000e+00)\
+  5  -240.0  4.188e-01     2.85       -240.0    4.020e+00    0.000e+00 ( 0.000e+00)\
+  6  -120.0  3.650e+00     2.85       -120.0    4.285e+00    0.000e+00 ( 0.000e+00)\
+  7     0.0  8.874e+00     2.85          0.0    4.568e+00    0.000e+00 ( 0.000e+00)\
+  8   120.0  9.733e+00     3.23        120.0    4.869e+00    0.000e+00 ( 0.000e+00)\
+  9   240.0  7.407e+00     6.41        240.0    5.190e+00    0.000e+00 ( 0.000e+00)\
+ 10   360.0  6.355e+00     7.82        360.0    5.533e+00    0.000e+00 ( 0.000e+00)\
+ 11   480.0  4.679e+00     8.82        480.0    5.898e+00    0.000e+00 ( 0.000e+00)\
+ 12   600.0  5.174e+00     9.62        600.0    6.287e+00    0.000e+00 ( 0.000e+00)\
+ 13   720.0  7.430e+00    10.29        720.0    6.702e+00    0.000e+00 ( 0.000e+00)\
+ 14   840.0  6.521e+00    10.88        840.0    7.144e+00    0.000e+00 ( 0.000e+00)\
+ 15   960.0  7.473e+00    11.41        960.0    7.615e+00    0.000e+00 ( 0.000e+00)\
+ 16  1080.0  8.239e+00    11.88       1080.0    8.117e+00    0.000e+00 ( 0.000e+00)\
+ 17  1200.0  1.026e+01    12.32       1200.0    8.652e+00    0.000e+00 ( 0.000e+00)\
+ 18  1320.0  9.767e+00    12.73       1320.0    9.223e+00    0.000e+00 ( 0.000e+00)\
+ 19  1440.0  6.016e+00    13.11       1440.0    9.832e+00    0.000e+00 ( 0.000e+00)\
+ 20  1560.0  3.868e+00    13.47       1560.0    1.048e+01    0.000e+00 ( 0.000e+00)\
+ 21  1680.0  5.337e+00    13.80       1680.0    1.117e+01    0.000e+00 ( 0.000e+00)\
+ 22  1800.0  4.406e+00    14.12       1800.0    1.191e+01    1.034e+01 ( 5.676e-01)\
+ 23  1920.0  5.783e+00    14.43       1920.0    1.318e+01    1.318e+01 ( 6.485e-01)\
+ 24  2040.0  1.475e+01    14.72       2040.0    1.405e+01    1.405e+01 ( 7.289e-01)\
+ 25  2160.0  2.143e+01    15.00       2160.0    1.608e+01    1.608e+01 ( 7.392e-01)\
+ 26  2280.0  1.558e+01    15.27       2280.0    1.555e+01    1.555e+01 ( 8.193e-01)\
+ 27  2400.0  2.249e+01    15.52       2400.0    1.397e+01    1.397e+01 ( 7.655e-01)\
+ 28  2520.0  4.022e+01    15.77       2520.0    1.982e+01    1.982e+01 ( 9.616e-01)\
+.. \
+ 60  6360.0  3.696e+02    21.22       6360.0    5.331e+02    5.331e+02 ( 7.198e+01)\
+ 61  6480.0  4.026e+02    21.35       6480.0    6.042e+02    6.042e+02 ( 8.306e+01)\
+ 62  6600.0  4.387e+02    21.48       6600.0    6.809e+02    6.809e+02 ( 9.412e+01)\
+ 63  6720.0  4.779e+02    21.60       6720.0    7.548e+02    7.548e+02 ( 1.089e+02)\
+ 64  6840.0  5.207e+02    21.72       6840.0    8.781e+02    8.781e+02 ( 1.273e+02)\
+ 65  6960.0  5.673e+02    21.84       6960.0    9.172e+02    9.401e+02 ( 1.499e+02)\
+ 66  7080.0  6.181e+02    21.96       7080.0    1.004e+03    1.275e+03 ( 1.947e+02)\
+ 67  7200.0  6.734e+02    22.08       7200.0    1.099e+03    1.277e+03 ( 1.925e+02)\
+ 68  7320.0  7.336e+02    22.19       7320.0    1.203e+03    1.143e+03 ( 1.787e+02)\
+ 69  7440.0  7.993e+02    22.31       7440.0    1.318e+03    1.189e+03 ( 1.899e+02)\
+ 70  7560.0  8.708e+02    22.42       7560.0    1.442e+03    1.347e+03 ( 2.229e+02)\
+ 71  7680.0  9.488e+02    22.53       7680.0    1.579e+03    1.099e+03 ( 2.235e+02)\
+\
+Normalization integral =  6.6062280e+06\
+Normalization factor =    1.8238934e+08\
+File strength.nrm (0:145) written to disk, (a0,a1)=( -840.00, 120.000)\
+File trans.nrm (0:145) written to disk, (a0,a1)=( -840.00, 120.000)\
+File transext.nrm (0:71) written to disk, (a0,a1)=( -840.00, 120.000)\
+File strength.cpp written to disk. Run root to plot strength.nrm\
+\
+magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>root -l strength.cpp\
+root [0] \
+Processing strength.cpp...\
+Info in <TCanvas::Print>: pdf file strength.pdf has been created\
+Info in <TCanvas::Print>: eps file strength.eps has been created\
+Info in <TCanvas::Print>: ps file strength.ps has been created\
+root [3] .q\
+magneg@1x-193-157-207-146.uio.no:Fe57_to_MSUworkshop>\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic strength.pdf \width11340 \height10900
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 \
+}
