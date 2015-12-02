@@ -1,0 +1,36 @@
+#
+# TALYS input file, 75Ge(n,g)76Ge
+#
+# THIS IS THE COMBINATION OF INPUTS THAT GIVE THE LOWEST CROSS SECTION, PRIOR TO
+# THE SuN DATA
+
+projectile n
+element ge
+mass 75
+energy energies.txt
+massmodel 2
+
+transeps 1.00E-15
+xseps 1.00E-25
+popeps 1.00E-25
+preequilibrium y
+#outspectra y
+fileresidual y
+#outbasic y
+
+# Level density from Goriely, Hilaire, Koning
+ldmodel 5
+
+# E1 GSF from Goriely & Khan, QRPA, Hartree-Fock-Bogolyubov tables
+strength 4
+gnorm 1.
+
+# jlm n-OMP
+jlmomp y
+
+
+outlevels y
+outdensity y
+outgamma y
+#astro n
+astro y
