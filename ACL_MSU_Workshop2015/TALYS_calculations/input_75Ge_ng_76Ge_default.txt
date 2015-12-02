@@ -1,0 +1,26 @@
+#
+# TALYS input file, 75Ge(n,g)76Ge
+#
+# DEFAULT INPUT MODELS FOR NLD & GSF (& N-OMP)
+# 
+
+projectile n
+element ge
+mass 75
+energy energies.txt
+massmodel 2
+
+transeps 1.00E-15
+xseps 1.00E-25
+popeps 1.00E-25
+preequilibrium y
+#outspectra y
+fileresidual y
+#outbasic y
+
+
+outlevels y
+outdensity y
+outgamma y
+astro n
+#astro y

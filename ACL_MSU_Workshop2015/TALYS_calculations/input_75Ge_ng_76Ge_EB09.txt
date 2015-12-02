@@ -1,0 +1,44 @@
+#
+# TALYS input file, 75Ge(n,g)76Ge
+#
+# THIS IS THE CT MODEL WITH LOW <Gg> INPUT
+# STRONGLY GUIDED BY THE SuN DATA
+#
+
+projectile n
+element ge
+mass 75
+energy energies.txt
+massmodel 2
+
+transeps 1.00E-15
+xseps 1.00E-25
+popeps 1.00E-25
+preequilibrium y
+#outspectra y
+fileresidual y
+#outbasic y
+
+# THIS IS NOW CT MODEL WITH FERMI GAS SPIN DISTRIBUTION
+ldmodel 4
+ptable 32 76 0
+ctable 32 76 0
+
+
+# GAMMA STRENGTH FUNCTIONS
+# E1 GSF from Goriely & Khan, QRPA, Hartree-Fock-Bogolyubov tables
+# MULTIPLIED WITH FACTOR 0.9
+strength 4
+gnorm 1.
+
+# UPBEND IS IN THE M1 STRENGTH, INCLUDED AS AN EXPONENTIAL par0*exp(-par1*Eg)
+# WITH PARAMETERS par0 = 0.7*3.34221e-08 MeV^(-3), par1 = 0.972918e-01 1/MeV
+ 
+# JLM OMP gives slightly lower cross section
+jlmomp y
+
+outlevels y
+outdensity y
+outgamma y
+astro n
+#astro y
