@@ -21,12 +21,6 @@ using namespace std;
 /* Declare parameters */
 const double T_ct  = 0.92;      // temperature parameter
 const double E0    = -0.392;  // shift for the CT level density
-/* Francesca gave me -0.208 but that must be wrong, because it gives rho(Bn) = rho_n= 0.63849E+06 1/MeV
- while d2rho with target spin 0.5, s-wave, D0=15.93 eV and sigma=5.044 gives rho = 1.653E+06 +/- 3.193E+05 1/MeV
- Therefore I swapped the shift to -0.807 which gives rho_n= 0.16519E+07 1/MeV, not perfect but much closer.
- This also gives TALYS Theor. D0 = 16.12 eV, much closer to the truth than before (got 40 eV!)
-*/
- 
 const double A     = 76.;      // mass A
 const double Pa = 1.590; //  deuteron pairing shift Pa' for the spin cutoff parameter, E&B 2009
 //const double a_par = 9.570; // Fermi-gas lev.dens. parameter for the spincutoff of E&B2005, not used here
