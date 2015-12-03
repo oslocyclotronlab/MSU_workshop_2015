@@ -21,6 +21,7 @@ using namespace std;
 /* Declare parameters */
 const double T_ct  = 0.92;      // temperature parameter
 const double E0    = -0.392;  // shift for the CT level density
+const double E0    = -0.392;  // shift for the CT level density 
 const double A     = 76.;      // mass A
 const double Pa = 1.590; //  deuteron pairing shift Pa' for the spin cutoff parameter, E&B 2009
 //const double a_par = 9.570; // Fermi-gas lev.dens. parameter for the spincutoff of E&B2005, not used here
