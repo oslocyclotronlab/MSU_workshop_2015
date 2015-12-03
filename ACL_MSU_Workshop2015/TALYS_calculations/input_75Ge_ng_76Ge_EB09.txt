@@ -27,7 +27,7 @@ ctable 32 76 0
 
 # GAMMA STRENGTH FUNCTIONS
 # E1 GSF from Goriely & Khan, QRPA, Hartree-Fock-Bogolyubov tables
-# MULTIPLIED WITH FACTOR 0.9
+# MULTIPLIED WITH FACTOR 0.65
 strength 4
 gnorm 1.
 
