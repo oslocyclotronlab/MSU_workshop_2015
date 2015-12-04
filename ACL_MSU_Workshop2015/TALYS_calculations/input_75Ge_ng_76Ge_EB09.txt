@@ -29,10 +29,12 @@ ctable 32 76 0
 # E1 GSF from Goriely & Khan, QRPA, Hartree-Fock-Bogolyubov tables
 # MULTIPLIED WITH FACTOR 0.65
 strength 4
+etable 32 76 0.
+ftable 32 76 0.65
 gnorm 1.
 
 # UPBEND IS IN THE M1 STRENGTH, INCLUDED AS AN EXPONENTIAL par0*exp(-par1*Eg)
-# WITH PARAMETERS par0 = 0.7*3.34221e-08 MeV^(-3), par1 = 0.972918e-01 1/MeV
+# WITH PARAMETERS par0 = 0.65*3.34221e-08 MeV^(-3), par1 = 0.972918e-01 1/MeV
  
 # JLM OMP gives slightly lower cross section
 jlmomp y
@@ -40,5 +42,5 @@ jlmomp y
 outlevels y
 outdensity y
 outgamma y
-astro n
-#astro y
+#astro n
+astro y

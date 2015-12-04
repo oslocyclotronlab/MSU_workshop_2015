@@ -1,0 +1,63 @@
+#
+# TALYS input file, 89Y(n,g)90Y
+#
+# LOWER LIMIT FG09, D0 = 3050 eV, <Gg> = 90 meV 
+
+projectile n
+element y
+mass 89
+energy energies.txt
+massmodel 2
+
+transeps 1.00E-15
+xseps 1.00E-25
+popeps 1.00E-25
+preequilibrium y
+#outspectra y
+fileresidual y
+#outbasic y
+
+
+# MODIFIED GORIELY TABLES (FG05)
+# USING CT MODEL FOR 90Y
+ldmodel 4
+ptable 39 90 0.0
+ctable 39 90 0.0
+
+# GAMMA STRENGTH FUNCTIONS
+# GENERALIZED LORENTZIAN, BUT MODIFIED WITH CONSTANT TEMPERATURE 
+strength 1
+gnorm 1.
+ggr 39 90 3.6 E1
+egr 39 90 16.80 E1
+sgr 39 90 233.0 E1
+
+# M1 SPIN-FLIP
+ggr 39 90 2.7 M1
+egr 39 90 9.5 M1
+sgr 39 90 1.1 M1
+
+# EXTRA M1 STRENGTH AS LOW-LYING PYGMY TO MIMICK SM CALC
+gpr 39 90 2.0 M1
+epr 39 90 2.0 M1
+spr 39 90 0.1 M1
+
+# EXTRA E1 STRENGTH AS LOW-LYING PYGMY TO REPRODUCE DATA
+gpr 39 90 2.5 E1
+epr 39 90 7.0 E1
+spr 39 90 1.2 E1
+
+
+# IN ADDITION M1 EXPONENTIAL UPBEND IN ACCORDANCE WITH RONALD'S SM CALCS
+#              fstrength=fstrength+
+#     +        (5.0*10.**(-08)*exp(-2.5*Egamma))
+
+# global parameters for the n-OMP
+localomp n
+
+outlevels y
+outdensity y
+outgamma y
+
+#astro n
+astro y
