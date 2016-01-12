@@ -4,6 +4,7 @@
 /*	ldmodel 4, for 76Ge                                             */
 /*																	*/
 /*	Version Sunday August 3,  2014, Cecilie                         */
+/*	Last update January 12,  2016, Cecilie                          */
 /********************************************************************/
 
 /* 76Ge */
@@ -21,9 +22,9 @@ using namespace std;
 /* Declare parameters */
 const double T_ct  = 0.92;      // temperature parameter
 const double E0    = -0.392;  // shift for the CT level density
-const double E0    = -0.392;  // shift for the CT level density 
 const double A     = 76.;      // mass A
-const double Pa = 1.590; //  deuteron pairing shift Pa' for the spin cutoff parameter, E&B 2009
+const double Pa = 2.780; //  deuteron pairing shift Pa' for the spin cutoff parameter, E&B 2009
+//const double Pa = 1.590; //  THIS IS WRONG!! MUST BE THE PROTON PAIRING  - deuteron pairing shift Pa' for the spin cutoff parameter, E&B 2009
 //const double a_par = 9.570; // Fermi-gas lev.dens. parameter for the spincutoff of E&B2005, not used here
 //const double E1 = 1.009; // energy shift for E&B2005 spin cutoff, not used here
 
@@ -92,7 +93,7 @@ int main(){
             n_cum += nld_calc[i]*ex_bin6;
         
         /* Write Ex, ldmodel 4 temperature, n_cum, nld_calc, nld_calc (supposed to be nld_tot, with spin degeneracy) to file */
-        fprintf(output76Gefile,"%7.2f %6.3f %7.2E %8.2E %8.2E ",e_calc[i],temp_calc[i],n_cum,nld_calc[i],nld_calc[i]);
+        fprintf(output76Gefile,"%7.2f %6.3f %9.2E %8.2E %8.2E ",e_calc[i],temp_calc[i],n_cum,nld_calc[i],nld_calc[i]);
         
         /* Dummy variables for next loop over spins */
         levdens = nld_calc[i];
